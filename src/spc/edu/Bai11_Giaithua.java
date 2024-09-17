@@ -15,7 +15,10 @@ public class Bai11_Giaithua {
         int i = 1, sonhap, giaithua = 1;
         System.out.println("Nhap so can tinh giai thua:");
         sonhap = sc.nextInt();
-        giaithua = giaithua * i;
+        while (i <= sonhap){
+            giaithua *= i;
+            i++;
+        }
         System.out.println("giai thua cua" + sonhap + "la: " + giaithua);
     }
 }
