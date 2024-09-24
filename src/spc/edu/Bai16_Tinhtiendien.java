@@ -12,7 +12,7 @@ public class Bai16_Tinhtiendien {
     public static void main(String[] args) {
         System.out.println("Tinh tien dien");
         Scanner sc = new Scanner(System.in);
-        double chisocu, chisomoi, tieuthu, thanhtien = 0;
+        double chisocu, chisomoi, tieuthu, thanhtien = 0, tieuthu;
         System.out.print("Nhap chi so cu (kwh): ");
         chisocu = sc.nextDouble();
         System.out.print("Nhap chi so moi (kwh): ");
@@ -25,24 +25,16 @@ public class Bai16_Tinhtiendien {
             if (tieuthu > mocArray[i]){
                 thanhtien += (mocArray[i] - moc) * giaArray[i];
                 moc = mocArray[i];
-                System.out.printf("so tien dien phai tra la: ");
             }
             else
             {
                 thanhtien += (tieuthu - moc) * giaArray[i];
                 moc = tieuthu;
-                System.out.printf("so tien dien phai tra la: ");
             }
         }
         if (tieuthu > 400)
-        {
             thanhtien += (tieuthu - 400) * giaArray[5];
         }
-        System.out.println("So tien dien phai tra la: ");
-        for(int j = 0; j <= giaArray. length; j++){
-        }
-        
-        }
-        System.out.println("So tien dien phai tra la: " + thanhtien);
+        System.out.printf("So tien dien phai tra la: %.2f(VND)\n ", thanhtien);
     }
 }
