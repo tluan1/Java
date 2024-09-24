@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package spc.edu;
-
+import java.util.ArrayList;
 /**
  *
  * @author Administrator
@@ -15,7 +15,7 @@ public class Bai21_ArrayList1 {
         a.add("Luan");
         System.out.println("ArrayList a: " + a);
         ArrayList b = new ArrayList();
-        for (int i = 0; i < 10; i++){
+        for (int i = 1; i < 10; i++){
             //String x = b.get(""+i+"");
             b.add(i);
         }
