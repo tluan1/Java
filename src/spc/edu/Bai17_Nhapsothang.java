@@ -12,12 +12,18 @@ public class Bai17_Nhapsothang {
     public static void main(String[] args) {
         System.out.println("Tinh so thang: ");
         Scanner sc = new Scanner(System.in);
-        System.out.println("Nhap so thang : ");
-        int sothang = sc.nextInt();
-        System.out.println("Nhap nam: ");
-        int sonam = sc.nextInt();
-        System.out.println("Thang " + sothang + " co 31 ngay ");
-        System.out.println("Thang " + sothang + " co 30 ngay ");
-        System.out.println("Thang " + sothang + " co 28 hoac 29 ngay ");
+        System.out.print("Nhap so thang : ");
+        int month = sc.nextInt();
+        System.out.print("Nhap nam: ");
+        int year = sc.nextInt();
+        int days = DaysInMonth(month, year);
+        System.out.printf("Thang %d co %d ngay.\n", month, year, days);
+    }
+    static int DaysInMonth(int month, int year)
+    {
+        if (month == 2) {
+            return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0 ? 29 : 28;
+        }
+            return month == 4 || month == 6 || month == 9 || month == 11 ? 30 : 31;
     }
 }
